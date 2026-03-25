@@ -29,6 +29,7 @@ h3 {
 p {
   font-family: "aptos light";
 }
+
 /* Reset */
 * {
   margin: 0;
@@ -405,6 +406,19 @@ p {
   margin: 0 auto;
 }
 
+.experience-container-description {
+  width: 80%;
+  display: flex;
+  margin-left: auto;
+  margin-top: 80px;
+}
+
+.experience-container-description p {
+  margin-left: auto;
+  text-align: right;
+  color: black;
+}
+
 .title-box {
   width: 100%;
   background-color: #f0ff01;
@@ -479,11 +493,23 @@ p {
 }
 
 .contact-container-addresse {
-  width: 100%;
-  margin-top: 200px;
+  width: 90%;
+  margin-top: 100px;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  gap: 350px;
+}
+
+.contact-container-map iframe {
+  width: 200%;
+  height: 300px;
+  border: 0;
+  border-radius: 12px;
+}
+
+.tel-email {
+  color: rgb(167, 167, 167);
 }
 
 .language-li a {
@@ -522,6 +548,20 @@ p {
   .work-container-title-left {
     display: flex;
     align-items: center;
+  }
+
+  .contact-container-addresse {
+    width: 100%;
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+  }
+
+  .contact-container-map iframe {
+    width: 140%;
+    height: 300px;
   }
 }
 
@@ -567,6 +607,24 @@ p {
     margin-top: 40px;
     margin-bottom: 40px;
   }
+
+  .contact-container-addresse {
+    width: 100%;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    gap: 40px;
+  }
+
+  .contact-container-map iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+
 }
 
 /* Behaviour below 560px*/
@@ -576,9 +634,11 @@ p {
   .about-container {
     margin-bottom: 30px;
   }
- #capabilities {
-  height: auto;
- }
+
+  #capabilities {
+    height: auto;
+  }
+
   .capabilities-container {
     align-items: center;
     flex-direction: column;
@@ -605,6 +665,7 @@ p {
   #skills {
     height: auto;
   }
+
   .skills-banner {
     display: block;
   }
@@ -633,6 +694,7 @@ p {
   #work {
     height: auto;
   }
+
   .work-container {
     margin-top: 50px;
     margin-bottom: 100px;
@@ -680,9 +742,22 @@ p {
   #experience {
     height: 700px;
   }
+
   #experience h2 {
     line-height: 2rem;
     font-size: 3rem;
+  }
+
+  .experience-container-description {
+    width: 70%;
+    display: flex;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+
+  .experience-container-description p {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
   }
 
   .title-box {
@@ -691,9 +766,10 @@ p {
 
   }
 
-#contact {
-  height: 700px;
-}
+  #contact {
+    height: auto;
+  }
+
   #contact h2 {
     font-size: 3rem;
   }
@@ -716,6 +792,10 @@ p {
 
     display: flex;
     justify-content: flex-end;
+  }
+
+  .tel-email {
+    font-size: 1.3rem;
   }
 
   .my-arrows {
