@@ -575,7 +575,9 @@ p {
   .about-container {
     margin-bottom: 30px;
   }
-
+ #capabilities {
+  height: auto;
+ }
   .capabilities-container {
     align-items: center;
     flex-direction: column;
@@ -599,6 +601,9 @@ p {
     line-height: 1.3rem;
   }
 
+  #skills {
+    height: auto;
+  }
   .skills-banner {
     display: block;
   }
@@ -624,6 +629,9 @@ p {
     font-size: 0.8rem;
   }
 
+  #work {
+    height: auto;
+  }
   .work-container {
     margin-top: 50px;
     margin-bottom: 100px;
@@ -668,6 +676,9 @@ p {
     line-height: 1.3rem;
   }
 
+  #experience {
+    height: 700px;
+  }
   #experience h2 {
     line-height: 2rem;
     font-size: 3rem;
@@ -679,7 +690,9 @@ p {
 
   }
 
-
+#contact {
+  height: 700px;
+}
   #contact h2 {
     font-size: 3rem;
   }
