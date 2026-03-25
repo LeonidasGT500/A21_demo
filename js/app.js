@@ -2,6 +2,23 @@
         const navLinks = document.querySelector(".nav-links");
         const overlay = document.querySelector(".menu-overlay");
         const navItems = document.querySelectorAll(".nav-links a");
+        const video = document.querySelector('.about-video');
+
+        async function startVideo() {
+            if (!video) return;
+
+            video.muted = true;
+            video.defaultMuter = true;
+            video.playsInLine = true;
+
+            try {
+                await video.play();
+            } catch (error) {
+                console.log('Autoplay blocked', error);
+            }
+        }
+
+        window.addEventListener('load', startVideo);
 
         function openMenu() {
             navLinks.classList.add("active");
