@@ -1,0 +1,711 @@
+@font-face {
+  font-family: aptos;
+  src: url(../fonts/aptos.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "aptos black";
+  src: url(../fonts/aptos-black.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "aptos light";
+  src: url(../fonts/aptos-light.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: 'atb';
+  src: url(../fonts/atbscript-rg.otf);
+}
+
+h2 {
+  font-family: "aptos black";
+}
+
+h3 {
+  font-family: "aptos";
+}
+
+p {
+  font-family: "aptos light";
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "aptos";
+}
+
+body {
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  z-index: 1001;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+
+}
+
+.logo img {
+  height: 80px;
+}
+
+.nav-links {
+  font-size: 1.1em;
+  font-family: "aptos";
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-direction: row-reverse;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #919191;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: black;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(160, 160, 160);
+  z-index: 1002;
+}
+
+/* overlay hidden by default */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+
+/* show overlay */
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sections */
+section {
+  width: 100%;
+  padding: 40px;
+  font-size: 24px;
+}
+
+/* About section */
+#about {
+  background-color: black;
+  z-index: 0;
+
+  display: flex;
+  align-items: center;
+  min-height: 50dvh;
+
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.about-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Skills section */
+#skills {
+  padding: 80px 20px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+  height: 1280px;
+
+}
+
+.skills-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.skills-banner {
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+}
+
+
+.skills-banner-right h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.skills-body {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
+.skills-body-arrows img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+
+  display: block;
+  margin-right: auto;
+}
+
+.skills-body-text h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.skills-body-text {
+  margin-top: 60px;
+}
+
+.skills-body-text h3,
+p {
+  color: white;
+}
+
+.skills-body-text p {
+  line-height: 2rem;
+  font-weight: lighter;
+}
+
+/* Capabilities section */
+#capabilities {
+  padding: 60px 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  min-height: 40vh;
+  height: 1080px;
+
+}
+
+.capabilities-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.capabilities-left img {
+  width: 100%;
+  max-width: 720px;
+}
+
+
+/* Right (text) */
+.capabilities-right {
+  flex: 1;
+  text-align: left;
+}
+
+.capabilities-right h2 {
+  margin-bottom: 20px;
+}
+
+.capabilities-right p {
+  line-height: 1.6rem;
+  color: #555;
+}
+
+/* Work section */
+#work {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  min-height: 40hv;
+}
+
+.work-container {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 20vh;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 200px;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.work-container h2 {
+  font-weight: bold;
+}
+
+.work-container h3 {
+  font-family: "aptos black";
+  font-size: 3rem;
+  color: rgb(100, 100, 100);
+}
+
+.work-container p {
+  color: black;
+}
+
+.work-container-title {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 100px;
+  gap: 20px;
+}
+
+.work-container-title-right {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.work-container-strategy-image {
+  width: 100%;
+}
+
+.work-container-strategy-image img {
+  width: 100%;
+  height: auto;
+}
+
+.work-container-design-image {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.work-container-design-image img {
+  width: 100%;
+  height: auto;
+}
+
+.work-container-cad-image {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.work-container-cad-image img {
+  width: 100%;
+  height: auto;
+}
+
+.work-container-visu-title {
+  margin-bottom: 80px;
+}
+
+.work-container-visu-image {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.work-container-visu-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+
+/* Experience section */
+
+#experience {
+  background-color: #f0ff01;
+  display: flex;
+  align-items: center;
+  min-height: 100hv;
+  height: 1080px;
+}
+
+#experience h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 40vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.experience-container-brands img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.title-box {
+  width: 100%;
+  background-color: #f0ff01;
+  margin-bottom: 80px;
+
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+.title-box img {
+  height: auto;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+/* Contact section */
+#contact {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  min-height: 60hv;
+  height: 1080px;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 20vh;
+  margin: 0 auto;
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contact-container-title {
+  width: 100%;
+
+  display: flex;
+  align-content: center;
+  justify-content: left;
+  gap: 20px;
+
+  margin-bottom: 8px;
+}
+
+.contact-container h2,
+h3,
+h4,
+p {
+  color: white;
+}
+
+.contact-container h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.contact-container-message {
+  width: 100%;
+}
+
+.contact-container-addresse {
+  width: 100%;
+  margin-top: 200px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.language-li a {
+  color: rgb(213, 213, 213);
+}
+
+/* Behaviour below 1024px*/
+
+@media (max-width: 1024px) {
+
+  body h2 {
+    line-height: 3.4rem;
+  }
+
+  .my-arrows {
+    width: 80px;
+    height: auto;
+  }
+
+  .capabilities-container {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .capabilities-left {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .work-container-title {
+    margin-bottom: 50px;
+  }
+
+  .work-container-title-left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 220px;
+    height: 100vh;
+    background-color: white;
+    padding: 80px 20px 20px 20px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Behaviour below 560px*/
+
+@media (max-width: 560px) {
+
+  .about-container {
+    margin-bottom: 30px;
+  }
+
+  .capabilities-container {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .capabilities-left {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .capabilities-right h1 {
+    font-size: 1.4rem;
+  }
+
+  .capabilities-right p {
+    text-align: justify;
+    hyphens: auto;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+
+  .skills-banner {
+    display: block;
+  }
+
+  .skills-banner-left {
+    display: block;
+    margin-bottom: auto;
+  }
+
+  .skills-banner-right h2 {
+    line-height: 2rem;
+    font-size: 2.6rem;
+  }
+
+  .skills-body-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .skills-body-text p {
+    line-height: 1.3rem;
+    text-align: justify;
+    hyphens: auto;
+    font-size: 0.8rem;
+  }
+
+  .work-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .work-container-title-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .work-container-design-image {
+    margin-bottom: 20px;
+  }
+
+  .work-container-cad-image {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .work-container-title {
+    display: block;
+  }
+
+  .work-container-title-right h2 {
+    margin-top: 8px;
+    line-height: 2rem;
+    font-size: 2.6rem;
+  }
+
+  .work-container h3 {
+    font-family: "aptos black";
+    color: rgb(100, 100, 100);
+    text-align: justify;
+    hyphens: auto;
+    font-size: 1.4rem;
+  }
+
+  .work-container p {
+    text-align: justify;
+    hyphens: auto;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+
+  #experience h2 {
+    line-height: 2rem;
+    font-size: 3rem;
+  }
+
+  .title-box {
+    margin-bottom: 20px;
+    display: block;
+
+  }
+
+
+  #contact h2 {
+    font-size: 3rem;
+  }
+
+  #contact h3 {
+    font-size: 1rem;
+  }
+
+  .contact-container-title {
+    display: block;
+  }
+
+  .contact-container-title-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-container-addresse {
+    margin-top: 150px;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .my-arrows {
+    width: 70px;
+    height: auto;
+  }
+}
