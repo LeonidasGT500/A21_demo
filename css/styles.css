@@ -500,7 +500,9 @@ p {
   justify-content: space-between;
   gap: 350px;
 }
-
+.contact-container-addresse-text {
+  align-content: end;
+}
 .contact-container-map iframe {
   width: 200%;
   height: 300px;
@@ -555,18 +557,18 @@ p {
     margin-top: 100px;
 
     display: flex;
-    justify-content: center;
-    gap: 150px;
+    justify-content: space-around;
+    gap: 160px;
   }
 
   .contact-container-map iframe {
-    width: 140%;
+    width: 150%;
     height: 300px;
   }
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .menu-toggle {
     display: block;
   }
